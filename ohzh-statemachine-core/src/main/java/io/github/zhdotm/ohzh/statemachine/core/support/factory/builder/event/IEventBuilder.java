@@ -6,5 +6,5 @@ package io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event;
 
 public interface IEventBuilder<E> {
 
-    IEventPayloadBuilder<E> payload(Object... objs);
+    IEventCodeBuilder<E> code(E eventCode);
 }

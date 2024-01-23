@@ -1,10 +1,12 @@
 package io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event;
 
+import io.github.zhdotm.ohzh.statemachine.core.domain.IEvent;
+
 /**
  * @author zhihao.mao
  */
 
 public interface IEventPayloadBuilder<E> {
 
-    IEventCodeBuilder<E> id(E eventCode);
+    IEvent<E> build();
 }

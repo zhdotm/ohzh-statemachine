@@ -2,7 +2,7 @@ package io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.im
 
 import io.github.zhdotm.ohzh.statemachine.core.domain.impl.EventImpl;
 import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.IEventBuilder;
-import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.IEventPayloadBuilder;
+import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.IEventCodeBuilder;
 
 /**
  * @author zhihao.mao
@@ -16,11 +16,11 @@ public class EventBuilderImpl<E> implements IEventBuilder<E> {
     }
 
     @Override
-    public IEventPayloadBuilder<E> payload(Object... objs) {
+    public IEventCodeBuilder<E> code(E eventCode) {
         EventImpl<E> event = EventImpl.getInstance();
-        event.payload(objs);
+        event.eventCode(eventCode);
 
-        return EventPayloadBuilderImpl.getInstance(event);
+        return EventCodeBuilderImpl.getInstance(event);
     }
 
 }

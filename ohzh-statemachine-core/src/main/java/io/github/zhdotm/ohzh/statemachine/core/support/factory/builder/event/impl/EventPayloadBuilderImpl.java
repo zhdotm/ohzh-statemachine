@@ -1,7 +1,7 @@
 package io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.impl;
 
+import io.github.zhdotm.ohzh.statemachine.core.domain.IEvent;
 import io.github.zhdotm.ohzh.statemachine.core.domain.impl.EventImpl;
-import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.IEventCodeBuilder;
 import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.IEventPayloadBuilder;
 import lombok.AllArgsConstructor;
 
@@ -20,10 +20,9 @@ public class EventPayloadBuilderImpl<E> implements IEventPayloadBuilder<E> {
     }
 
     @Override
-    public IEventCodeBuilder<E> id(E eventCode) {
-        event.eventCode(eventCode);
+    public IEvent<E> build() {
 
-        return EventCodeBuilderImpl.getInstance(event);
+        return event;
     }
 
 }

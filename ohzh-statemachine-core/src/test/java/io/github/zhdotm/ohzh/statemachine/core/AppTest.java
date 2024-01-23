@@ -1,8 +1,12 @@
 package io.github.zhdotm.ohzh.statemachine.core;
 
+import cn.hutool.json.JSONUtil;
+import io.github.zhdotm.ohzh.statemachine.core.domain.IEvent;
 import io.github.zhdotm.ohzh.statemachine.core.domain.IStateContext;
 import io.github.zhdotm.ohzh.statemachine.core.domain.IStateMachine;
+import io.github.zhdotm.ohzh.statemachine.core.support.factory.EventFactory;
 import io.github.zhdotm.ohzh.statemachine.core.support.factory.StateMachineFactory;
+import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.event.IEventBuilder;
 import io.github.zhdotm.ohzh.statemachine.core.support.factory.builder.machine.IStateMachineBuilder;
 
 import java.util.Arrays;
@@ -10,7 +14,7 @@ import java.util.Arrays;
 public class AppTest {
 
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         IStateMachineBuilder<StateMachineEnum, RefundStateEnum, RefundEventEnum, String, String> stateMachineBuilder = StateMachineFactory.create();
         //初始化退款订单
         stateMachineBuilder.createExternalTransition()
@@ -121,6 +125,14 @@ public class AppTest {
         IStateContext<RefundStateEnum, RefundEventEnum> stateContext = stateMachine.fireEvent(RefundStateEnum.STATE_REFUND_INIT, RefundEventEnum.EVENT_INIT, "xxxzzz");
         System.out.println(stateContext.getPayload() + "");
 
+    }
+
+    public static void main(String[] args) {
+        IEventBuilder<String> eventBuilder = EventFactory.create();
+        IEvent<String> event = eventBuilder.code("eventCode001")
+                .payload("zhangsan", 100)
+                .build();
+        System.out.println(JSONUtil.toJsonPrettyStr(event));
     }
 
     /**
