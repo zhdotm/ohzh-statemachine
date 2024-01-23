@@ -101,9 +101,9 @@
 
 
     <scm>
-        <connection>scm:git:git@github.com:zhdotm/ohzh-project.git</connection>
-        <developerConnection>scm:git:git@github.com:zhdotm/ohzh-project.git</developerConnection>
-        <url>git@github.com:zhdotm/ohzh-project.git</url>
+        <connection>scm:git:git@github.com:zhdotm/ohzh-statemachine.git</connection>
+        <developerConnection>scm:git:git@github.com:zhdotm/ohzh-statemachine.git</developerConnection>
+        <url>git@github.com:zhdotm/ohzh-statemachine.git</url>
     </scm>
 
     <licenses>
