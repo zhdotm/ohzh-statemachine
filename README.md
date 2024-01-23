@@ -1,5 +1,9 @@
 # 状态机组件
 
+代码由https://github.com/zhdotm/ohzh-project/tree/main/ohzh-component/ohzh-statemachine迁移过来
+
+使用案例源码：https://github.com/zhdotm/ohzh-statemachine/tree/main/ohzh-statemachine-starter-web/src/test
+
 ## 模型参考
 
 参考：https://blog.csdn.net/significantfrank/article/details/104996419
