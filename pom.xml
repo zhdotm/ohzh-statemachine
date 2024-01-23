@@ -7,6 +7,9 @@
     <groupId>io.github.zhdotm</groupId>
     <artifactId>ohzh-statemachine</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ohzh-statemachine-core</module>
+    </modules>
 
     <packaging>pom</packaging>
     <name>ohzh-statemachine</name>
